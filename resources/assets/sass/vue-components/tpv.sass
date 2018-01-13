@@ -1,0 +1,49 @@
+.tpv-main-container
+  width: 100%
+
+.tpv-inner-container
+  display: flex
+  height: 100%
+
+@media (orientation: portrait)
+  .tpv-inner-container
+    flex-direction: column-reverse
+
+.tpv-left
+  display: flex
+  flex-direction: column
+  flex: 4
+
+.tpv-right
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  height: 100%
+  width: 100%
+  flex: 8
+
+.tpv-main
+  flex: 11
+
+.tpv-products-container
+  display: flex
+  height: 100%
+  margin-bottom: auto
+
+@media (orientation: portrait)
+  .tpv-products-container
+    flex-direction: column-reverse
+    height: 100%
+
+  .tpv-main
+    margin-bottom: auto
+
+  .tpv-left
+    height: 50%
+    //flex-grow: 6
+
+
+  .tpv-right
+    height: 50%
+    //flex-grow: 6
+    justify-content: space-around

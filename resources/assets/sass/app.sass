@@ -1,0 +1,218 @@
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
+@import "node_modules/bulma/sass/utilities/_all"
+
+@import "libs/font-awesome/font-awesome"
+@import "variables"
+@import "helpers"
+
+
+@import "login"
+@import "sidebar"
+@import "top-navbar"
+@import "libs/sweetalert"
+@import "vue-components/tpv"
+@import "vue-components/lines"
+@import "vue-components/carta"
+@import "vue-components/zones"
+@import "vue-components/header"
+@import "vue-components/orders"
+@import "vue-components/tables"
+@import "vue-components/sessions"
+@import "vue-components/customer"
+@import "vue-components/products"
+@import "vue-components/categories"
+@import "vue-components/menu-products"
+
+@import "buefy"
+@import "node_modules/bulma/bulma"
+@import "node_modules/buefy/src/scss/buefy"
+
+body, html
+  height: 100%
+  width: 100%
+
+.page-container
+  display: flex
+  height: 100%
+  width: 100%
+
+.sidebar-container
+  background-color: #e3e3e3
+  display: flex
+  flex-direction: column
+  height: 100%
+  flex: 3
+
+.main-container
+  display: flex
+  flex-direction: column
+  height: 100%
+  flex: 9
+  display: flex
+
+.logo
+  display: flex
+  justify-content: center
+  align-items: center
+  background: $mainColor
+  color: $menu-font-color
+  font-size: 23px
+  font-family: $brand-font
+  width: 100%
+  flex: 0 0 $top-navbar-height
+  a
+    text-decoration: none
+    color: $menu-font-color
+
+.sidebar-wrapper
+  overflow: auto
+  padding: 15px
+  width: 100%
+
+.top-nav-container
+  width: 100%
+  flex: 0 0 $top-navbar-height
+
+.wrapper-container
+  height: 100%
+  overflow: auto
+
+
+
+.crud-button
+  float: left
+  margin: 10px
+
+.container
+  padding-top: 30px
+
+  body
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    font-family: ClearSans-Regular
+
+@media (min-width: 768px)
+  .container
+    width: $container-width-small
+
+@media (min-width: 992px)
+  .container
+    width: $container-width-medium
+
+@media (min-width: 1200px)
+  .container
+    width: $container-width-large
+
+  .modal
+    text-align: center
+
+  @media screen and (min-width: 768px)
+    .modal:before
+      display: inline-block
+      vertical-align: middle
+      content: " "
+      height: 100%
+
+  .modal-dialog
+    display: inline-block
+    text-align: left
+    vertical-align: middle
+
+  .form-button
+    position: fixed
+    right: 0
+    top: 0
+    margin-top: 20px
+    margin-right: 20px
+    z-index: 9999
+
+  .disable-div
+    pointer-events: none
+    opacity: 0.4
+
+  .v-center
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+
+  #loading
+    width: 100%
+    height: 100%
+    top: 0px
+    left: 0px
+    position: fixed
+    display: block
+    z-index: 99
+
+  #loading-image
+    width: 150px
+    height: 150px
+    position: absolute
+    top: 40%
+    left: 45%
+    z-index: 100
+
+  #popup
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 1001
+
+  .content-popup
+    margin: 0px auto
+    margin-top: 120px
+    position: relative
+    padding: 10px
+    width: 800px
+    min-height: 250px
+    border-radius: 4px
+    background-color: #FFFFFF
+    box-shadow: 0 2px 5px #666666
+
+  .content-popup h2
+    color: #48484B
+    border-bottom: 1px solid #48484B
+    margin-top: 0
+    padding-bottom: 4px
+
+  .popup-overlay
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 999
+    display: none
+    background-color: #777777
+    cursor: pointer
+    opacity: 0.7
+
+  .Address--active
+    color: darkseagreen
+
+  .Address--inactive
+    color: darkgrey
+
+  /* Vue */
+  .btn-active
+    background-color: #00CE6F !important
+    color: white
+
+
+
+.dashboard
+  padding-top: 70px
+  color: $menu-active-background-color
+  font-size: 7em
+  width: 100%
+  height: 100%
+  text-align: center
+  font-family: $brand-font
+  .icon
+    padding-left: 20px
+
+

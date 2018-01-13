@@ -1,0 +1,34 @@
+.carta-container
+  display: flex
+  flex-direction: column
+
+.carta-header
+  display: flex
+  background-color: $mainColor
+  justify-content: space-around
+  align-items: center
+  color: #FFFFFF
+  height: 60px
+  width: 100%
+  font-size: 0.8em
+
+.carta-item
+  margin: 0 10px
+
+.carta-showing
+  color: $midGray
+
+.carta-no-order
+  position: absolute
+  top: 90px
+  padding: 50px
+  color: $midGray
+  font-size: 3em
+
+@media screen and (max-height: 600px)
+  .carta-header
+    height: auto
+    padding: 3px
+
+    .button
+      height: 25px

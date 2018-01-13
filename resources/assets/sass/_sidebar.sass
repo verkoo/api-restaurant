@@ -1,0 +1,105 @@
+.sidebar-collapse
+
+  .nav > li > a
+      color: $menu-font-color
+      background: $main-background-color
+
+      &:hover, &:focus
+        background: $menu-active-background-color
+  
+
+
+.active-menu 
+  background-color: $menu-active-background-color !important
+
+.navbar-side 
+  z-index: 1
+  position: absolute
+  width: $sidebar-width
+  padding-top: $top-navbar-height
+
+.arrow 
+  float: right
+
+.fa.arrow:before 
+  content: "\f104"
+
+.active > a >
+  .fa.arrow:before
+    content: "\f107"
+
+.nav-second-level li,
+.nav-third-level li 
+  border-bottom: none !important
+
+.nav-second-level li a 
+  padding-left: 37px !important
+
+.nav-third-level li a 
+  padding-left: 55px !important
+
+.nav-second-level > li > a:before ,
+.nav-third-level > li > a:before 
+    content: ""
+    display: block
+    position: absolute
+    left: 20px
+    width: 15px
+    height: 1px
+    background: $menu-font-color
+    top: 23px
+
+.nav-second-level > li > a:after,
+.nav-third-level > li > a:after 
+    content: ""
+    display: block
+    position: absolute
+    left: 20px
+    width: 1px
+    height: 100%
+    background: $menu-font-color
+    top: 0px
+    z-index: 10
+
+.nav-second-level  > li:last-child > a:after,
+.nav-third-level  > li:last-child > a:after 
+    height: 50%
+
+.nav-third-level > li > a:after,
+.nav-third-level > li > a:before  
+    left: 40px
+
+.navbar-side 
+    border: none
+    background-color: #202020
+
+.navbar-cls-top 
+    background: #4D4D4D
+    border-bottom: none
+
+
+.navbar-default 
+   border: 0px solid black
+
+
+.navbar-header 
+    background: #A70303
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus 
+    background-color: #B40101
+
+.navbar-default .navbar-toggle 
+    border-color: #fff
+
+.navbar-default .navbar-toggle .icon-bar 
+  background-color: #FFF
+
+.nav > li > a > i 
+  margin-right: 10px
+
+
+
+
+
+
+

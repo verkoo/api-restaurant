@@ -1,0 +1,11 @@
+/vendor
+.idea
+/node_modules
+.env
+.env.dusk.local
+/public/css/app.css.map
+/public/log/log.txt
+composer.lock
+/public/storage
+/public/cash_recipes
+.DS_Store

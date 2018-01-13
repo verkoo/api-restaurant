@@ -1,0 +1,57 @@
+.top-menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: $lightGray
+
+  &-icons
+    display: flex
+    margin-left: 10px
+
+  &-icon
+    margin: 5px
+    svg
+      height: 40px
+      width: 40px
+
+  &-box
+    display: flex
+    margin-right: 10px
+    font-size: 1.3em
+    span
+      padding: 10px
+    svg
+      height: 40px
+      width: 40px
+
+  &-modes
+    display: flex
+    align-items: center
+    font-size: 1em
+
+    &-item
+      padding: 10px
+      svg
+        height: 40px
+        width: 40px
+
+    &-selected
+      color: $mainColor
+      fill: $mainColor
+
+  @media screen and (max-height: 600px)
+    .top-menu
+      &-box
+        display: none
+
+      &-icons svg
+        height: 25px
+        width: 25px
+
+      &-modes
+        &-item svg
+          height: 25px
+          width: 25px
+
+        &-item span
+          display: none

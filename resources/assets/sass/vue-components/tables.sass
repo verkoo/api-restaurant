@@ -1,0 +1,48 @@
+
+.tables-container
+  padding-top: 30px
+  display: flex
+
+.vue-tables
+  display: flex
+  flex-wrap: wrap
+
+  li
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    margin: 10px
+
+    &:active
+      background-color: white
+
+    .tittle
+      font-size: 20px
+
+    .subTittle
+      font-size: 1em
+
+@media (max-width: 1200px)
+  .vue-tables
+    li
+      width: 120px
+      height: 120px
+
+@media (max-width: 768px)
+  .vue-tables
+    li
+      width: 100px
+      height: 100px
+
+@media (min-width: 1200px)
+  .vue-tables
+    li
+      width: 150px
+      height: 150px
+
+.availableTable
+  background-color: #8ED64F
+
+.occupiedTable
+  background-color: #EC6161

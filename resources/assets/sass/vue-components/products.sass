@@ -1,0 +1,171 @@
+.product-category-selected
+  margin: 0 20px
+  font-size: 1.3em
+
+.products
+  display: flex
+  flex-wrap: wrap
+  padding: 30px
+  list-style: none
+
+  li
+    position: relative
+    margin: 5px
+    color: white
+    -webkit-border-radius: 10px
+    -moz-border-radius: 10px
+    border-radius: 10px
+
+    &:active
+      background-color: white
+
+    .img
+      height: 100%
+      -webkit-border-radius: 10px
+      -moz-border-radius: 10px
+      border-radius: 10px
+    .tittle-text
+      background: rgba(0,0,0,.4)
+      width: 100%
+      text-align: center
+      padding: 10px
+
+    .tittle
+      position: absolute
+      display: flex
+      top: 0
+      width: 100%
+      height: 100%
+      justify-content: center
+      align-items: center
+      color: $lightGray
+
+    .price
+      position: absolute
+      top: 0
+      right: 0
+      text-align: center
+      background-color: #428bca
+      width: 80px
+      margin: 0
+
+    .stock
+      position: absolute
+      top: 20px
+      right: 0
+      text-align: center
+      background-color: #428bca
+      width: 60px
+      margin: 0
+
+@media (max-width: 1200px)
+  .products
+    li
+      width: 170px
+      height: 170px
+
+    img
+      position: absolute
+      clip: rect(0px,170px,170px,0px)
+
+    .tittle
+      font-size: 14px
+
+  .grid4x4
+      width: 120px !important
+      height: 120px !important
+
+@media (max-width: 768px)
+  .products
+    li
+      width: 100px
+      height: 100px
+
+    img
+      position: absolute
+      clip: rect(0px,100px,100px,0px)
+
+    .tittle
+      font-size: 12px
+
+@media (min-width: 1200px)
+  .products
+    li
+      width: 190px
+      height: 190px
+
+    img
+      position: absolute
+      clip: rect(0px,190px,190px,0px)
+
+    .tittle
+      font-size: 18px
+
+@media (orientation: portrait)
+  .products
+    li
+      width: 100%
+      height: 40px
+
+    .img
+      display: none
+
+    .tittle
+      font-size: 20px
+
+.product-photo-form
+  position: relative
+
+.product-count
+  color: black
+
+.category-filter
+  padding: 10px 0
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+  button
+    margin-left: 10px
+
+  .delete-icon
+    position: absolute
+    top: 0
+    right: 0
+    padding: 5px
+
+  img
+    width: 100px
+
+.product-red
+  background-color: #EC6161
+
+.product-blue
+  background-color: #3199E6
+
+.product-orange
+  background-color: #F79B4A
+
+.product-green
+  background-color: #8ED64F
+
+.product-grey
+  background-color: grey
+
+.left-arrow
+  color: $darkGray
+  cursor: pointer
+  position: fixed
+  bottom: 80px
+  right: 20px
+  i
+    font-size: 40px
+
+.right-arrow
+  color: $darkGray
+  cursor: pointer
+  position: fixed
+  bottom: 40px
+  right: 20px
+  i
+    font-size: 40px

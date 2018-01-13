@@ -1,0 +1,120 @@
+
+.lines
+  background: white
+  display: flex
+  height: 100%
+  flex-direction: column
+  justify-content: space-between
+
+.order
+  flex: 0 0 50px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 10px
+  color: $darkGray
+  background-color: white
+  font-size: 1em
+
+.lines-container
+  margin-bottom: auto
+  //display: flex
+  flex-direction: column
+  justify-content: space-between
+  overflow-y: auto
+  padding-bottom: 50px
+
+.line
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px
+
+  &-product
+    margin-right: auto
+    font-size: 15px
+
+  &-item
+    flex: 0 0 40px
+    text-align: center
+    font-size: 12px
+
+  &-active
+    background-color: $mainColor !important
+    color: white
+
+
+.lines-summary
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px
+  width: 100%
+  height: 80px
+  background-color: $mainColor
+  color: white
+
+  &-customer
+    font-size: 12px
+
+  &-total
+    font-size: 1.4em
+    text-align: center
+
+.lines-buttons
+  display: flex
+  flex: 1
+  margin: 0 5px
+  justify-content: space-around
+  align-items: center
+
+.buttons
+  display: flex
+  justify-content: space-around
+  align-items: center
+  width: 100%
+  background: white
+  padding: 10px 10px
+
+.line-button
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  color: black
+  font-size: small
+  margin: 0 5px
+
+.pending
+  color: red
+
+.ordered
+  color: green
+
+.btn-disabled
+  pointer-events: none !important
+  opacity: 0.4
+
+@media screen and (max-width: 1024px)
+  .line-button
+    width: 15px
+    height: 15px
+    margin: 10px
+
+    &-icon
+      display: none
+
+@media screen and (max-height: 600px)
+  .lines-summary
+    height: auto
+    padding: 10px
+
+    &-total small
+      display: none
+
+  .line
+    padding: 2px
+
+  #cash-options
+    display: none
