@@ -12,6 +12,7 @@ mv .env.example .env
 php artisan migrate
 php artisan key:generate
 php artisan db:seed
+touch public/log/log.txt
 ```
 
 * Boot up a server. If you are using Laravel Valet visit api-restaurant.test
