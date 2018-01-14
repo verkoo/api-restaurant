@@ -19,6 +19,13 @@ class MenuOrdersController extends ApiController
         return $this->respond($menu->fresh());
     }
 
+    public function update(Order $order, MenuOrder $menu)
+    {
+        $menu->update(request()->only('price'));
+
+        return $this->respond($order->menus);
+    }
+
     public function destroy(Order $order, MenuOrder $menu)
     {
         $menu->delete();

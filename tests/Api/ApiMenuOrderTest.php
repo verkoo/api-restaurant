@@ -68,12 +68,49 @@ class ApiMenuOrderTest extends TestCase
     }
 
     /** @test */
+    public function it_updates_the_menu_price_from_an_order()
+    {
+        $order = create(Order::class);
+        $menu = create(Menu::class);
+        $menuOrder = create(MenuOrder::class, [
+            'order_id' => $order->id,
+            'menu_id' => $menu->id,
+            'price' => 1000
+        ]);
+
+        $this->assertDatabaseHas('menu_orders', [
+            'order_id' => $order->id,
+            'menu_id' => $menu->id,
+            'price' => 1000
+        ]);
+
+        $this->put("api/orders/{$order->id}/menus/{$menuOrder->id}", [
+            'price' => 2000
+        ]);
+
+        $this->assertDatabaseHas('menu_orders', [
+            'order_id' => $order->id,
+            'menu_id' => $menu->id,
+            'price' => 2000
+        ]);
+    }
+
+    /** @test */
     public function it_deletes_a_menu_from_an_order()
     {
-        $order = factory(Order::class)->create();
-        $menu = factory(MenuOrder::class)->create();
+        $order = create(Order::class);
+        $menu = create(Menu::class);
+        $menuOrder = create(MenuOrder::class, [
+            'order_id' => $order->id,
+            'menu_id' => $menu->id,
+        ]);
 
-        $response = $this->delete("api/orders/{$order->id}/menus/{$menu->id}");
+        $this->assertDatabaseHas('menu_orders', [
+            'order_id' => $order->id,
+            'menu_id' => $menu->id
+        ]);
+
+        $response = $this->delete("api/orders/{$order->id}/menus/{$menuOrder->id}");
         $response->assertStatus(200);
 
         $this->assertDatabaseMissing('menu_orders', [
