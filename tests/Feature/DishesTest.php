@@ -31,11 +31,13 @@ class DishesTest extends TestCase
         $response = $this->post("dishes", [
             'name' => 'Paella',
             'priority' => '1',
+            'pass' => '1',
         ]);
 
         $this->assertDatabaseHas('dishes', [
             'name' => 'Paella',
             'priority' => 1,
+            'pass' => 1,
         ]);
 
         $response->assertStatus(302);
@@ -51,7 +53,10 @@ class DishesTest extends TestCase
     /** @test */
     public function it_updates_a_dish()
     {
-        $dish = factory(Dish::class)->create();
+        $dish = create(Dish::class, [
+            'name' => 'Rice',
+            'pass' => 1
+        ]);
 
         $response = $this->json("PATCH", "dishes/{$dish->id}", [
             'name' => 'Paella',
@@ -59,6 +64,7 @@ class DishesTest extends TestCase
 
         $this->assertDatabaseHas('dishes', [
             'name' => 'Paella',
+            'pass' => 0,
             'id'     => $dish->id,
         ]);
 

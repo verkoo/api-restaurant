@@ -43,8 +43,14 @@ class DishesController extends Controller
         $this->validate($request,[
             'name' => 'required'
         ]);
-        
-        $dish->update($request->all());
+
+        $attributes = $request->all();
+
+        if ( !$request->has('pass')) {
+            $attributes["pass"] = 0;
+        }
+
+        $dish->update($attributes);
 
         return redirect('dishes');
     }

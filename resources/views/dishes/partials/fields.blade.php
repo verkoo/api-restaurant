@@ -6,3 +6,6 @@
     {!! Form::label('priority', 'Orden', ['class' => 'label']) !!}
     {!! Form::text('priority', null, ['class' => 'input', 'id' => 'priority']) !!}
 </p>
+<p class="control has-top-padding">
+    {!! Form::checkbox('pass', 1, $dish->pass) !!} Admite pase
+</p>
