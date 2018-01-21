@@ -16,7 +16,7 @@ class CreateDefaultDeliveryNotesTable extends Migration
         Schema::create('default_delivery_notes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('customer_id')->unsigned();
-            $table->foreign('customer_id')->references('id')->on('customers');
+//            $table->foreign('customer_id')->references('id')->on('customers');
             $table->timestamps();
         });
     }

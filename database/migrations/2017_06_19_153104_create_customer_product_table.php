@@ -16,7 +16,7 @@ class CreateCustomerProductTable extends Migration
         Schema::create('customer_product', function (Blueprint $table) {
 
             $table->integer('customer_id')->unsigned();
-            $table->foreign('customer_id')->references('id')->on('customers');
+//            $table->foreign('customer_id')->references('id')->on('customers');
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('price');

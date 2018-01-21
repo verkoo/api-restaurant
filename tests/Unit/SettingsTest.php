@@ -48,12 +48,4 @@ class SettingsTest extends TestCase
 
         $this->assertEquals('Name Changed', Settings::get('company_name'));
     }
-
-    /** @test */
-    public function it_sets_the_active_module()
-    {
-        create(Options::class, ['module' => 'shop']);
-
-        $this->assertEquals('shop',Settings::get('module'));
-    }
 }

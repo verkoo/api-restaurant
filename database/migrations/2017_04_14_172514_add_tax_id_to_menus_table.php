@@ -15,7 +15,7 @@ class AddTaxIdToMenusTable extends Migration
     {
         Schema::table('menus', function (Blueprint $table) {
             $table->unsignedInteger('tax_id')->nullable();
-            $table->foreign('tax_id')->references('id')->on('taxes');
+//            $table->foreign('tax_id')->references('id')->on('taxes');
         });
     }
 

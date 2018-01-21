@@ -20,9 +20,9 @@ class CreateMenuOrdersTable extends Migration
             $table->string('name');
             $table->integer('price');
 
-            $table->foreign('order_id')
-                ->references('id')
-                ->on('orders');
+//            $table->foreign('order_id')
+//                ->references('id')
+//                ->on('orders');
 
             $table->foreign('menu_id')
                 ->references('id')
